@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "ABBench-Core",
+	"classinstvars" : [
+		"bench"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"aPath"
+	],
+	"name" : "ABBench",
+	"type" : "normal"
+}
