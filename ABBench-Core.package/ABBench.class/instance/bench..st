@@ -8,7 +8,6 @@ bench: aBlock
 			Smalltalk garbageCollect.
 			aMarks add: aBlock timeToRun.
 			aPath := false.
-			Smalltalk garbageCollect .
-	bMarks add: aBlock timeToRun ] .
-	^ (((aMarks sum + 1 nanoSecond) / aMarks size + 1 nanoSecond)
-		/ ((bMarks sum + 1 nanoSecond) / bMarks size + 1 nanoSecond)) asFloat
+			Smalltalk garbageCollect.
+			bMarks add: aBlock timeToRun ].
+	^ (  ((bMarks sum + 1 nanoSecond) / bMarks size + 1 nanoSecond) / ((aMarks sum + 1 nanoSecond) / aMarks size + 1 nanoSecond)) asFloat

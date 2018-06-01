@@ -1,4 +1,7 @@
 profiling
 bench: aBlock
-	^ [ bench := self new.
-		bench bench: aBlock ] ensure: [ bench := nil ]
+	| oldBench | 
+	^ [ oldBench := bench. 
+		bench := self new.
+	bench bench: aBlock ]
+		ensure: [ bench := oldBench ]
