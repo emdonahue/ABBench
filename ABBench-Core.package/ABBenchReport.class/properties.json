@@ -2,15 +2,12 @@
 	"commentStamp" : "",
 	"super" : "Object",
 	"category" : "ABBench-Core",
-	"classinstvars" : [
-		"bench"
-	],
+	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"aPath",
 		"marks"
 	],
-	"name" : "ABBench",
+	"name" : "ABBenchReport",
 	"type" : "normal"
 }

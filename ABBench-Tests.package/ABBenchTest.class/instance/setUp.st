@@ -1,3 +1,3 @@
 initialization
 setUp
-	ABBench a.
+	ABBench b.

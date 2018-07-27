@@ -1,0 +1,3 @@
+constants
+bayesFactorThreshold
+	^ 10.

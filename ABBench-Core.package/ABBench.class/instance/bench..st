@@ -3,11 +3,10 @@ bench: aBlock
 	| aMarks bMarks |
 	aMarks := OrderedCollection new.
 	bMarks := OrderedCollection new.
-	10
-		timesRepeat: [ aPath := true.
-			Smalltalk garbageCollect.
-			aMarks add: aBlock timeToRun.
+	Smalltalk garbageCollect.
+	[ self isSufficientEvidence: { aMarks. bMarks } ]
+		whileFalse: [ aPath := true.
+			aMarks add: (self benchBlock: aBlock).
 			aPath := false.
-			Smalltalk garbageCollect.
-			bMarks add: aBlock timeToRun ].
-	^ (  ((bMarks sum + 1 nanoSecond) / bMarks size + 1 nanoSecond) / ((aMarks sum + 1 nanoSecond) / aMarks size + 1 nanoSecond)) asFloat
+			bMarks add: (self benchBlock: aBlock) ].
+	^ self marks: {aMarks. bMarks}.
