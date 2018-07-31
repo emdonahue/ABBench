@@ -1,3 +1,3 @@
 printing
 percentSlower
-	^ (marks second median / marks first median) - 1 * 100
+	^ (marks first median / marks second median - 1) * 100.

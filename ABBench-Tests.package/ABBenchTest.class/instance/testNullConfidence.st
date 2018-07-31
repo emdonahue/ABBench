@@ -1,3 +1,3 @@
 tests
 testNullConfidence
-	self assert: (ABBench new nullConfidence: 9) equals: (9/10).
+	self assert: (ABBench new nullConfidence: 9) equals: 90.

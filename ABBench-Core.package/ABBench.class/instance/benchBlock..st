@@ -1,4 +1,7 @@
 profiling
 benchBlock: aBlock
+	| benchResult |
 	Smalltalk garbageCollect.
-	^ ((aBlock benchFor: self class benchTime) period asNanoSeconds / 1e9) asFloat.
+	benchResult := aBlock benchFor: self class benchTime.
+	^ benchResult executionsPerSecond.
+	"^ benchResult iterations."

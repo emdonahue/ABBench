@@ -1,3 +1,3 @@
 constants
 benchTime
-	^ 0.5 seconds.
+	^ 1 seconds.

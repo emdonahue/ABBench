@@ -1,3 +1,3 @@
 constants
 bayesFactorThreshold
-	^ 10.
+	^ bayesFactorThreshold 

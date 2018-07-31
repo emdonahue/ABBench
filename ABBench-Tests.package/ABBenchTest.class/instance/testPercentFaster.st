@@ -1,3 +1,3 @@
 tests
 testPercentFaster
-	self assert: (ABBench new marks: #(#(1000) #(500))) percentFaster equals: 100.
+	self assert: (ABBench new marks: #(#(500) #(1000))) percentFaster equals: 100.
