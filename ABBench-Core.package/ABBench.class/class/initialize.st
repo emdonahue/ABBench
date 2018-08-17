@@ -1,4 +1,5 @@
-constants
+initialization
 initialize
-	bayesFactorThreshold := 10.
-	scaleFactor := 101/100
+	"By default, b is the optimized path we are in the process of developing, so tests should run against the b path."
+
+	samplingB := true.

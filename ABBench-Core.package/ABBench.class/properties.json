@@ -3,9 +3,7 @@
 	"super" : "Object",
 	"category" : "ABBench-Core",
 	"classinstvars" : [
-		"bench",
-		"bayesFactorThreshold",
-		"scaleFactor"
+		"samplingB"
 	],
 	"pools" : [ ],
 	"classvars" : [ ],

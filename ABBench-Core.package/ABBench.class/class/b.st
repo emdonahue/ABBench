@@ -1,5 +1,5 @@
-debugging
+api
 b
-	"Sets the default path for non-benched executions to B."
+	"Sets the default path to optimized path b. This is the global default."
 
-	bench := nil.
+	samplingB := true.

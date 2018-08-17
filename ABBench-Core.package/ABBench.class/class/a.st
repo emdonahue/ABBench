@@ -1,5 +1,5 @@
-debugging
+api
 a
-	"Sets the default path for non-benched executions to A."
+	"Sets the default path to unoptimized path a. Useful for debugging changes to the unoptimized code while developing the optimization."
 
-	bench := self new.
+	samplingB := false.

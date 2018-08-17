@@ -1,0 +1,3 @@
+testing
+bIsEqual
+	^ self nullAccepted 

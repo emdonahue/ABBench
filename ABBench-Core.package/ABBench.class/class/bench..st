@@ -1,7 +1,4 @@
-profiling
+api
 bench: aBlock
-	| oldBench |
-	^ [ oldBench := bench.
-	bench := self new.
-	bench bench: aBlock ]
-		ensure: [ bench := oldBench ].
+	^ [ self drawSamples: aBlock ]
+		ensure: [ samplingB := true ].
