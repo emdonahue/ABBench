@@ -1,4 +1,4 @@
 tests
 testEqual
 	<script>
-	(ABBench bench: [ 1.1 seconds wait  ]) inspect.
+	(ABBench bench: [ 0.1 seconds wait ]) inspect.
