@@ -1,4 +1,4 @@
-statistics
+private-statistics
 logFactorial: n
 	"Approximation to the continuous log factorial function. Based on PolyMath library's Beta distribution."
 

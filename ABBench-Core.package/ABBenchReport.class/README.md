@@ -1,0 +1,1 @@
+A BenchReport is a datastructure that holds the time samples from a single benchmarking run and offers a UI to explore the results of the run.
