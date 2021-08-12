@@ -3,6 +3,17 @@ A performance testing utility for Pharo Smalltalk.
 
 ABBench is a lightweight utility for conducting performance A/B tests on optimizations made to Pharo Smalltalk code.
 
+## Installation
+
+To install ABBench, execute the following code in a playground:
+
+```
+Metacello new
+  githubUser: 'emdonahue' project: 'ABBench' commitish: 'master' path: ''; 
+  baseline: 'ABBench';
+  load.
+```
+
 ## Quick Start
 
 To see ABBench in action, print the following in a workspace to benchmark two versus one division operations:
