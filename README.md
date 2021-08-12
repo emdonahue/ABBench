@@ -7,7 +7,7 @@ ABBench is a lightweight utility for conducting performance A/B tests on optimiz
 
 To install ABBench, execute the following code in a playground:
 
-```
+```smalltalk
 Metacello new
   githubUser: 'emdonahue' project: 'ABBench' commitish: 'master' path: ''; 
   baseline: 'ABBench';
@@ -18,7 +18,7 @@ Metacello new
 
 To see ABBench in action, print the following in a workspace to benchmark two versus one division operations:
 
-```
+```smalltalk
 ABBench bench: [ ABBench a: [ 1/1/1 ] b: [ 1/1 ] ].
 ```
 
@@ -28,15 +28,15 @@ You should see a message such as  "B is 21.12% FASTER than A," although the perc
 
 Suppose you want to test whether a change to #myMethod will improve its performance. At the site where you want to make the change, insert the following code:
 
-```
+```smalltalk
 myMethod
-...
+  ...
   ABBench a: [ ...old code...] b: [...optimized code...].
-...
+  ...
 ```
-Afterword, in a Playground, run your program with `ABBench>>bench:` by printing the following line:
+Afterwards, in a Playground, run your program with `ABBench>>bench:` by printing the following line:
 
-```
+```smalltalk
 ABBench bench: [ MyObject new myMethod ].
 ```
 ABBench will run #myMethod repeatedly, alternating between the A and B branches until it gathers enough statistical evidence to make a determination as to which branch, if either, is faster.
