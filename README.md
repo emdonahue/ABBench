@@ -26,7 +26,7 @@ You should see a message such as  "B is 21.12% FASTER than A," although the perc
 
 ## Usage
 
-Suppose you want to test whether a change to #myMethod will improve its performance. At the site where you want to make the change, insert the following code:
+Suppose you want to test whether a change to `#myMethod` will improve its performance. At the site where you want to make the change, insert the following code:
 
 ```smalltalk
 myMethod
@@ -39,17 +39,17 @@ Afterwards, in a Playground, run your program with `ABBench>>bench:` by printing
 ```smalltalk
 ABBench bench: [ MyObject new myMethod ].
 ```
-ABBench will run #myMethod repeatedly, alternating between the A and B branches until it gathers enough statistical evidence to make a determination as to which branch, if either, is faster.
+ABBench will run `#myMethod` repeatedly, alternating between the A and B branches until it gathers enough statistical evidence to make a determination as to which branch, if either, is faster.
 
 When code is run outside of the `ABBench>>bench:` block, `ABBench>>a:b:` switches will default to the B path. It is therefore advisable to develop the optimized branch on the B path so that unit tests will run normally as you develop, even with `ABBench>>a:b:` switches scattered throughout the code. If you need to change the default execution path to A to debug your unoptimized code, use `ABBench a`
 
 You can manually restore execution to the B path with `ABBench b`, or it will automatically reset after the next call to `ABBench>>bench:`.
 
-The ABBenchReport object returned by `ABBench>>bench:` can also be used within other code via the #bIsFaster, #bIsSlower, and #bIsEqual test methods.
+The ABBenchReport object returned by `ABBench>>bench:` can also be used within other code via the `#bIsFaster`, `#bIsSlower`, and `#bIsEqual` test methods.
 
 ## Roadmap
 - Enable easy API access to statistical sensitivity parameters
 - Create aggregate reports to facilitate performance regression suites
-- Integrate inspector vizualization of runtimes
+- Integrate inspector vizualization of run times
 
 Contributions welcome!
