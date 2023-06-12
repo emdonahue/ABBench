@@ -1,5 +1,5 @@
 # ABBench
-## A Lightweight Performance Testing Utility for Pharo Smalltalk.
+A Lightweight Performance Testing Utility for Pharo Smalltalk.
 
 ABBench is a lightweight utility for conducting performance A/B tests on optimizations made to Pharo Smalltalk code. Rather than attempting to measure the runtime of a given program, ABBench runs two versions of the same program against one another in the same runtime context to determine which is faster. Program versions are created by placing if blocks throughout the code that conditionally execute depending on whether the optimized or unoptimized branch is being tested.
 
